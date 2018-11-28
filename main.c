@@ -6,7 +6,7 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 10:22:05 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/27 16:40:27 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/11/28 12:04:36 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int		main(void)
 {
 
 	putchar('\n');
+
+	/* ================== BEGINNING OF THE FIRST PART ================== */
 
 	/* ============ FT_IS ============ */
 	printf("FT_ISALPHA\n");
@@ -1075,6 +1077,14 @@ int		main(void)
 		nbr2 = ft_strchr(data5, '1');
 		(strcmp(nbr1, nbr2) == 0) ? printf("- \x1b[32;1m[GOOD]\x1b[0m\n") :
 			printf("- \x1b[31;1m[NOT GOOD]\x1b[0m\n\t\tstrchr = %s\n\t\tft_strchr = %s\n", nbr1, nbr2);
+
+		printf("\tTest 6 ");
+		char	data6[] = "h1";
+
+		nbr1 = strchr(data6, '\0');
+		nbr2 = ft_strchr(data6, '\0');
+		(strcmp(nbr1, nbr2) == 0) ? printf("- \x1b[32;1m[GOOD]\x1b[0m\n") :
+			printf("- \x1b[31;1m[NOT GOOD]\x1b[0m\n\t\tstrchr = %s\n\t\tft_strchr = %s\n", nbr1, nbr2);
 	}
 
 	printf("FT_STRRCHR\n");
@@ -1364,4 +1374,8 @@ int		main(void)
 		(nbr1 == nbr2) ? printf("- \x1b[32;1m[GOOD]\x1b[0m\n") :
 			printf("- \x1b[31;1m[NOT GOOD]\x1b[0m\n\t\tstrncmp = %d\n\t\tft_strncmp = %d\n", nbr1, nbr2);
 	}
+
+	/* ================== END OF THE FIRST PART ================== */
+
+
 }

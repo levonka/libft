@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/27 10:45:18 by agottlie          #+#    #+#             */
+/*   Updated: 2018/11/28 11:20:48 by agottlie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t	i;
-	int		k;
-	unsigned char ch;
-	unsigned char *new_arr;
-	unsigned char *old_arr;
+	size_t			i;
+	int				k;
+	unsigned char	ch;
+	unsigned char	*new_arr;
+	unsigned char	*old_arr;
 
 	i = -1;
 	k = 0;

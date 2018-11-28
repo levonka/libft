@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 12:50:37 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/23 14:13:52 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/23 14:13:52 by agottlie          #+#    #+#             */
+/*   Updated: 2018/11/28 11:23:12 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	unsigned char buff[len];
-	unsigned char *new_arr;
-	unsigned char *old_arr;
+	size_t			i;
+	unsigned char	buff[len];
+	unsigned char	*new_arr;
+	unsigned char	*old_arr;
 
 	i = -1;
 	new_arr = (unsigned char *)dst;
@@ -26,6 +26,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		buff[i] = old_arr[i];
 	i = -1;
 	while (++i < len)
-	 	new_arr[i] = buff[i];
+		new_arr[i] = buff[i];
 	return (new_arr);
 }
