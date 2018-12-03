@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/30 17:54:12 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/03 14:33:38 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	g;
+	char	p;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
+	p = 0;
+	if (n == -2147483648)
 	{
-		s1[i] = s2[g];
-		++i;
-		++g;
+		write(fd, "-2", 2);
+		ft_putnbr_fd(147483648, fd);
 	}
-	s1[i] = '\0';
-	return (s1);
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		p = (n % 10) + 48;
+		write(fd, &p, 1);
+	}
+	else
+	{
+		p = n + 48;
+		write(fd, &p, 1);
+	}
 }

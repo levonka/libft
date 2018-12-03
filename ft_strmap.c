@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/29 10:59:57 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/01 17:04:04 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t	i;
-	size_t	g;
+	char	*new_arr;
+	char	*begining;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
-	{
-		s1[i] = s2[g];
-		++i;
-		++g;
-	}
-	s1[i] = '\0';
-	return (s1);
+	if (s == NULL || f == NULL)
+		return (NULL);
+	if ((new_arr = ft_strnew(ft_strlen(s))) == NULL)
+		return (NULL);
+	begining = new_arr;
+	while (*s != '\0')
+		*new_arr++ = (f)(*(s++));
+	*new_arr = '\0';
+	return (begining);
 }

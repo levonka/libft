@@ -6,7 +6,7 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 08:34:03 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:19:41 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/03 09:56:49 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	new_arr = (unsigned char *)s;
 	while (++i < n)
 	{
-		if (*new_arr == c)
+		if (*new_arr == (unsigned char)c)
 			return (new_arr);
 		++new_arr;
 	}

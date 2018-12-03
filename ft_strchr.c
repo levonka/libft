@@ -6,7 +6,7 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 11:11:42 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:23:27 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/01 16:28:26 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	char	*new_arr;
 
 	new_arr = (char*)s;
-	if (new_arr == NULL)
-		return (NULL);
 	while (*new_arr != '\0')
 	{
 		if (*new_arr == c)

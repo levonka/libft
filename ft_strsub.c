@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/29 15:52:40 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/01 17:07:55 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	g;
+	char	*new_arr;
+	char	*fresh;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
-	{
-		s1[i] = s2[g];
-		++i;
-		++g;
-	}
-	s1[i] = '\0';
-	return (s1);
+	if (s == NULL)
+		return (NULL);
+	fresh = ft_strnew(len);
+	if (fresh == NULL)
+		return (NULL);
+	new_arr = fresh;
+	while (s[start] != '\0' && len-- != 0)
+		*(fresh++) = s[start++];
+	*fresh = '\0';
+	return (new_arr);
 }

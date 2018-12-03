@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/29 16:52:23 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/03 14:23:47 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	g;
+	char	*new_arr;
+	int		i;
+	int		j;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
+	i = 0;
+	j = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	new_arr = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (new_arr == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		s1[i] = s2[g];
+		new_arr[i] = s1[i];
 		++i;
-		++g;
 	}
-	s1[i] = '\0';
-	return (s1);
+	while (s2[j] != '\0')
+	{
+		new_arr[i] = s2[j];
+		++j;
+		++i;
+	}
+	return (new_arr);
 }

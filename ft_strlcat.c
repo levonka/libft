@@ -6,7 +6,7 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 13:04:12 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:23:34 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/01 16:27:19 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	g = -1;
 	i = ft_strlen(dst) - 1;
 	orig_buf_size = ft_strlen(dst);
-	if (dst == NULL || src == NULL)
-		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
 	if (size > ft_strlen(dst))

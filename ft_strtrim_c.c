@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/30 12:22:49 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/03 15:55:04 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strtrim_c(char const *s, char c)
 {
-	size_t	i;
-	size_t	g;
+	int		begin;
+	int		end;
+	char	*new_arr;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
+	begin = 0;
+	end = ft_strlen(s) - 1;
+	if (s)
 	{
-		s1[i] = s2[g];
-		++i;
-		++g;
+		while (s[begin] == c)
+			++begin;
+		while (s[end] == c && end >= 0)
+			--end;
+		new_arr = ft_strsubi(s, begin, end);
+		if (new_arr == NULL)
+			return (NULL);
+		return (new_arr);
 	}
-	s1[i] = '\0';
-	return (s1);
+	return (NULL);
 }

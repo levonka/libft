@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/29 15:39:00 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/01 17:07:17 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
-	size_t	g;
-
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
-	{
-		s1[i] = s2[g];
-		++i;
-		++g;
-	}
-	s1[i] = '\0';
-	return (s1);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	return ((ft_strncmp(s1, s2, n) == 0) ? 1 : 0);
 }

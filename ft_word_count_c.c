@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_word_count_c.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 10:48:41 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:12:04 by agottlie         ###   ########.fr       */
+/*   Created: 2018/11/30 14:53:48 by agottlie          #+#    #+#             */
+/*   Updated: 2018/11/30 15:56:00 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+int		ft_word_count_c(const char *s, char c)
 {
-	size_t	i;
-	size_t	g;
+	int		state;
+	int		nw;
+	int		i;
 
-	i = ft_strlen(s1);
-	g = 0;
-	if (n == 0)
-		return (s1);
-	while (g < n && s2[g])
+	state = 0;
+	nw = 0;
+	i = -1;
+	while (s[++i] != '\0')
 	{
-		s1[i] = s2[g];
-		++i;
-		++g;
+		if (s[i] == c)
+			state = 0;
+		else if (state == 0)
+		{
+			state = 1;
+			++nw;
+		}
 	}
-	s1[i] = '\0';
-	return (s1);
+	return (nw);
 }

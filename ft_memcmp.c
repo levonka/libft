@@ -6,7 +6,7 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 15:22:12 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:21:17 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/01 16:55:59 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = -1;
 	arr1 = (unsigned char *)s1;
 	arr2 = (unsigned char *)s2;
-	while (++i < n || arr1[i] != '\0')
+	while (++i < n)
 		if (arr1[i] != arr2[i])
 			return (arr1[i] - arr2[i]);
 	return (0);

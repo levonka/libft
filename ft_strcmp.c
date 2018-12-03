@@ -6,16 +6,21 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 18:14:25 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:14:24 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/03 14:27:35 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 == *s2 && *s1 != '\0')
+	unsigned char	*new_arr1;
+	unsigned char	*new_arr2;
+
+	new_arr1 = (unsigned char *)s1;
+	new_arr2 = (unsigned char *)s2;
+	while (*new_arr1 == *new_arr2 && *new_arr1 != '\0')
 	{
-		++s1;
-		++s2;
+		++new_arr1;
+		++new_arr2;
 	}
-	return (*s1 - *s2);
+	return (*new_arr1 - *new_arr2);
 }
