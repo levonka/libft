@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 13:04:12 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/01 16:27:19 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:53:59 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

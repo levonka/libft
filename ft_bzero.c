@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 09:59:58 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 12:34:00 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:51:15 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

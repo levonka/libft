@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 10:45:18 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:20:48 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:51:55 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 16:03:03 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/05 16:56:38 by agottlie         ###   ########.fr       */
+/*   Created: 2018/12/05 15:07:59 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/05 16:51:27 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (s == NULL)
+	if (alst == NULL || new == NULL)
 		return ;
-	while (*s)
-		ft_putchar(*s++);
+	new->next = (*alst);
+	(*alst) = new;
 }

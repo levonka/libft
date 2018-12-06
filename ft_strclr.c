@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 15:43:15 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/01 17:02:23 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:53:28 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {

@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsubi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 08:41:28 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/05 16:55:45 by agottlie         ###   ########.fr       */
+/*   Created: 2018/12/04 17:08:35 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/05 17:16:02 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsubi(char const *s, unsigned int start, unsigned int end)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char	*new_arr;
-	char	*fresh;
+	t_list	*new;
 
-	fresh = (char *)malloc((end - start) + 2);
-	if (fresh == NULL)
+	new = (t_list*)malloc(sizeof(t_list));
+	if (new == NULL)
 		return (NULL);
-	new_arr = fresh;
-	while (s[start] != '\0' && start <= end)
-		*(fresh++) = s[start++];
-	*fresh = '\0';
-	return (new_arr);
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else
+	{
+		new->content_size = content_size;
+		new->content = (t_list*)malloc(content_size);
+		if (new->content == NULL)
+			return (NULL);
+		ft_memcpy(new->content, content, content_size);
+	}
+	new->next = NULL;
+	return (new);
 }

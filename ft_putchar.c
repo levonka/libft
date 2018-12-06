@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 15:58:58 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/30 17:52:49 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:52:26 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_putchar(char c)
 {

@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 10:59:57 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/01 17:04:04 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:54:16 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

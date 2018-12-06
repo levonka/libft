@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 12:17:15 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 12:17:03 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:51:51 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {

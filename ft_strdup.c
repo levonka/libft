@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 10:21:29 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/01 16:16:51 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:53:45 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

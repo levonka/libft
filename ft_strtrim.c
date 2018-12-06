@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 08:33:23 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 14:10:36 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:55:50 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strtrim(char const *s)
 {

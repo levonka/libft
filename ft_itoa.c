@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 15:03:13 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/03 14:26:00 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:51:23 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 static char	*ft_solver(int n)
 {

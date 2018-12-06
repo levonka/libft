@@ -6,7 +6,7 @@
 #    By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/20 12:12:25 by agottlie          #+#    #+#              #
-#    Updated: 2018/11/28 12:51:24 by agottlie         ###   ########.fr        #
+#    Updated: 2018/12/05 17:16:24 by agottlie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,10 @@ INC = includes/*.h
 
 all: $(NAME)
 
-$(NAME): clean
+$(NAME):
 	gcc $(FLAGS) -c $(SRC) -I $(INC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
-	gcc -L. -lft o_main_1st_part.c
-	/bin/rm -f $(OBJ) $(NAME)
-	./a.out
 
 clean:
 	/bin/rm -f $(OBJ)

@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 16:50:06 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/28 11:14:48 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:58:51 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 16:42:26 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/30 17:51:20 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:53:05 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {

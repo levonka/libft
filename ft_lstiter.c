@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 16:03:03 by agottlie          #+#    #+#             */
-/*   Updated: 2018/12/05 16:56:38 by agottlie         ###   ########.fr       */
+/*   Created: 2018/12/05 15:37:27 by agottlie          #+#    #+#             */
+/*   Updated: 2018/12/05 16:51:39 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (s == NULL)
-		return ;
-	while (*s)
-		ft_putchar(*s++);
+	t_list	*ptr;
+
+	ptr = lst;
+	while (ptr != NULL)
+	{
+		(f)(ptr);
+		ptr = ptr->next;
+	}
 }

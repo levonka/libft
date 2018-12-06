@@ -6,11 +6,11 @@
 /*   By: agottlie <agottlie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 14:53:48 by agottlie          #+#    #+#             */
-/*   Updated: 2018/11/30 15:56:00 by agottlie         ###   ########.fr       */
+/*   Updated: 2018/12/05 16:56:11 by agottlie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int		ft_word_count_c(const char *s, char c)
 {
