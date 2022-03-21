@@ -81,4 +81,5 @@ $ make
 ## Final score
 
 125/100 (max)
+
 ![](screenshots/score.png)
