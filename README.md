@@ -77,3 +77,8 @@ $ make
 * [`ft_lstdelone`](libft/ft_lstdelone.c)		- delete element from list.
 * [`ft_lstiter`](libft/ft_lstiter.c)			- apply function to content of all list's elements.
 * [`ft_lstmap`](libft/ft_lstmap.c)				- apply function to content of all list's elements into new list.
+
+## Final score
+
+125/100 (max)
+![](screenshots/score.png)
