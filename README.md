@@ -1,7 +1,6 @@
 # libft
 
-this project consists of coding basic C functions (see below), which are then compiled
-into a library for use in other projects of the cursus.
+Libft is a School 42 project. The purpose of this project is to create own C library.
 
 ## Usage
 
